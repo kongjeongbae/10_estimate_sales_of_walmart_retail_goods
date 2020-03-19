@@ -1,6 +1,6 @@
 모델 파라미터 및 피쳐 정리
 
-
+0.75514 - TimeSeriesSplit, LGB
 2020-03-18 23:42:12.575420
 item_id  dept_id  cat_id  store_id  
 state_id  year  month  week  day  
@@ -15,4 +15,34 @@ rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolli
 ('learning_rate', 0.01)
 ('n_jobs', -1)
 ('device', 'cpu')
+--------------------------------
+0.59797 - TimeSeriesSplit, LGB - 상위 3퍼
+2020-03-19 16:52:21.762531
+item_id  dept_id  cat_id  store_id  
+state_id  year  month  week  day  
+weekday  event_name_1  event_type_1  snap_CA  snap_TX  
+snap_WI  sell_price  lag_t28  lag_t29  lag_t30  
+rolling_mean_t7  rolling_std_t7  rolling_mean_t30  rolling_mean_t90  rolling_mean_t180  
+rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t30  
+('boosting_type', 'gbdt')
+('class_weight', None)
+('colsample_bytree', 0.8)
+('importance_type', 'split')
+('learning_rate', 0.02)
+('max_depth', -1)
+('min_child_samples', 20)
+('min_child_weight', 0.001)
+('min_split_gain', 0.0)
+('n_estimators', 2500)
+('n_jobs', -1)
+('num_leaves', 2000)
+('objective', None)
+('random_state', None)
+('reg_alpha', 0.0)
+('reg_lambda', 0.0)
+('silent', True)
+('subsample', 0.8)
+('subsample_for_bin', 200000)
+('subsample_freq', 0)
+('device', 'gpu')
 --------------------------------
