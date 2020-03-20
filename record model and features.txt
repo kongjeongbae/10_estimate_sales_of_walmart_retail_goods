@@ -46,3 +46,33 @@ rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolli
 ('subsample_freq', 0)
 ('device', 'gpu')
 --------------------------------
+
+2020-03-20 21:33:54.294536
+item_id  dept_id  cat_id  store_id  
+state_id  year  month  week  day  
+weekday  event_name_1  event_type_1  snap_CA  snap_TX  
+snap_WI  sell_price  lag_t28  lag_t29  lag_t30  
+rolling_mean_t7  rolling_std_t7  rolling_mean_t30  rolling_mean_t90  rolling_mean_t180  
+rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t30  
+('boosting_type', 'gbdt')
+('class_weight', None)
+('colsample_bytree', 0.8)
+('importance_type', 'split')
+('learning_rate', 0.02)
+('max_depth', -1)
+('min_child_samples', 20)
+('min_child_weight', 0.001)
+('min_split_gain', 0.0)
+('n_estimators', 4000)
+('n_jobs', -1)
+('num_leaves', 4000)
+('objective', None)
+('random_state', None)
+('reg_alpha', 0.0)
+('reg_lambda', 0.0)
+('silent', True)
+('subsample', 0.8)
+('subsample_for_bin', 200000)
+('subsample_freq', 0)
+('device', 'gpu')
+--------------------------------
