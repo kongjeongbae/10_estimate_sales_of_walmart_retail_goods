@@ -1,6 +1,9 @@
+
 모델 파라미터 및 피쳐 정리
 
-0.75514 - TimeSeriesSplit, LGB
+--------------------------------
+TimeSeriesSplit, LGB - 0.75514
+
 2020-03-18 23:42:12.575420
 item_id  dept_id  cat_id  store_id  
 state_id  year  month  week  day  
@@ -16,7 +19,8 @@ rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolli
 ('n_jobs', -1)
 ('device', 'cpu')
 --------------------------------
-0.59797 - TimeSeriesSplit, LGB - 상위 3퍼
+LGB - KFold - 0.59797
+
 2020-03-19 16:52:21.762531
 item_id  dept_id  cat_id  store_id  
 state_id  year  month  week  day  
@@ -46,8 +50,8 @@ rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolli
 ('subsample_freq', 0)
 ('device', 'gpu')
 --------------------------------
-
-2020-03-20 21:33:54.294536
+LGB - KFold - 0.57549
+2020-03-20 21:33:54.294536  
 item_id  dept_id  cat_id  store_id  
 state_id  year  month  week  day  
 weekday  event_name_1  event_type_1  snap_CA  snap_TX  
@@ -75,4 +79,39 @@ rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolli
 ('subsample_for_bin', 200000)
 ('subsample_freq', 0)
 ('device', 'gpu')
+--------------------------------
+XGB - KFold - 0.57549
+2020-03-21 22:17:37.999284 / 0.76278
+item_id  dept_id  cat_id  store_id  
+state_id  year  month  week  day  
+weekday  event_name_1  event_type_1  snap_CA  snap_TX  
+snap_WI  sell_price  
+('objective', 'reg:squarederror')
+('base_score', 0.5)
+('booster', None)
+('colsample_bylevel', 1)
+('colsample_bynode', 1)
+('colsample_bytree', 0.3)
+('gamma', 0)
+('gpu_id', 0)
+('importance_type', 'gain')
+('interaction_constraints', None)
+('learning_rate', 0.1)
+('max_delta_step', 0)
+('max_depth', 5)
+('min_child_weight', 1)
+('missing', nan)
+('monotone_constraints', None)
+('n_estimators', 10000)
+('n_jobs', 0)
+('num_parallel_tree', 1)
+('random_state', 0)
+('reg_alpha', 10)
+('reg_lambda', 1)
+('scale_pos_weight', 1)
+('subsample', 1)
+('tree_method', 'gpu_hist')
+('validate_parameters', False)
+('verbosity', None)
+('alpha', 10)
 --------------------------------
