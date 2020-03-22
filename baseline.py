@@ -41,7 +41,7 @@ def reduce_mem_usage(df, verbose=True):
     return df
 
 def write_record(features, params):
-    record = open("record model and features.txt", 'a')
+    record = open("record_model_and_features.txt", 'a')
     record.write("\n")
     record.write(str(datetime.datetime.now())+"\n")
 
@@ -108,7 +108,7 @@ for fold_n, (train_index, valid_index) in enumerate(splits):
         num_leaves = 4000,
         colsample_bytree = 0.8,
         subsample = 0.8,
-        n_estimators =500,
+        n_estimators =5000,
         learning_rate = 0.2,
         n_jobs = -1,
         device = 'gpu'
