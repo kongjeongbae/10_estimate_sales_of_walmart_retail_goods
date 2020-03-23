@@ -236,7 +236,7 @@ rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolli
 ('device', 'gpu')
 --------------------------------
 
-2020-03-22 20:03:51.781702
+2020-03-22 20:03:51.781702 - 0.57434
 
 오버피팅 시키려고 n_estimators를 5000까지 늘렸었음
 대부분 800 전후에서 종료됨.
@@ -258,6 +258,160 @@ rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolli
 ('min_child_weight', 0.001)
 ('min_split_gain', 0.0)
 ('n_estimators', 5000)
+('n_jobs', -1)
+('num_leaves', 4000)
+('objective', None)
+('random_state', None)
+('reg_alpha', 0.0)
+('reg_lambda', 0.0)
+('silent', True)
+('subsample', 0.8)
+('subsample_for_bin', 200000)
+('subsample_freq', 0)
+('device', 'gpu')
+--------------------------------
+
+2020-03-23 12:18:57.805641 - 0.56696
+item_id  dept_id  cat_id  store_id  
+state_id  year  month  week  day  
+weekday  event_name_1  event_type_1  snap_CA  snap_TX  
+snap_WI  sell_price  lag_t28  lag_t29  lag_t30  
+rolling_mean_t7  rolling_std_t7  rolling_mean_t30  rolling_mean_t90  rolling_mean_t180  
+rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t30  
+('boosting_type', 'gbdt')
+('class_weight', None)
+('colsample_bytree', 0.8)
+('importance_type', 'split')
+('learning_rate', 0.2)
+('max_depth', -1)
+('min_child_samples', 20)
+('min_child_weight', 0.001)
+('min_split_gain', 0.0)
+('n_estimators', 600)
+('n_jobs', -1)
+('num_leaves', 4000)
+('objective', None)
+('random_state', None)
+('reg_alpha', 0.0)
+('reg_lambda', 0.0)
+('silent', True)
+('subsample', 0.8)
+('subsample_for_bin', 200000)
+('subsample_freq', 0)
+('device', 'gpu')
+--------------------------------
+
+2020-03-23 15:11:58.662533
+
+모든 주차로 train시키는 것이 아닌,
+test셋과 똑같은 주차로만 train 시킴.(각년도 4~5월) - 0.66251
+
+item_id  dept_id  cat_id  store_id  
+state_id  year  month  week  day  
+weekday  event_name_1  event_type_1  snap_CA  snap_TX  
+snap_WI  sell_price  lag_t28  lag_t29  lag_t30  
+rolling_mean_t7  rolling_std_t7  rolling_mean_t30  rolling_mean_t90  rolling_mean_t180  
+rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t30  
+('boosting_type', 'gbdt')
+('class_weight', None)
+('colsample_bytree', 0.8)
+('importance_type', 'split')
+('learning_rate', 0.2)
+('max_depth', -1)
+('min_child_samples', 20)
+('min_child_weight', 0.001)
+('min_split_gain', 0.0)
+('n_estimators', 600)
+('n_jobs', -1)
+('num_leaves', 4000)
+('objective', None)
+('random_state', None)
+('reg_alpha', 0.0)
+('reg_lambda', 0.0)
+('silent', True)
+('subsample', 0.8)
+('subsample_for_bin', 200000)
+('subsample_freq', 0)
+('device', 'gpu')
+--------------------------------
+
+2020-03-23 15:48:16.573343 - 0.72705 - 오히려 과소적합되어있음을 확인
+item_id  dept_id  cat_id  store_id  
+state_id  year  month  week  day  
+weekday  event_name_1  event_type_1  snap_CA  snap_TX  
+snap_WI  sell_price  lag_t28  lag_t29  lag_t30  
+rolling_mean_t7  rolling_std_t7  rolling_mean_t30  rolling_mean_t90  rolling_mean_t180  
+rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t30  
+('boosting_type', 'gbdt')
+('class_weight', None)
+('colsample_bytree', 0.8)
+('importance_type', 'split')
+('learning_rate', 0.01)
+('max_depth', -1)
+('min_child_samples', 20)
+('min_child_weight', 0.001)
+('min_split_gain', 0.0)
+('n_estimators', 400)
+('n_jobs', -1)
+('num_leaves', 4000)
+('objective', None)
+('random_state', None)
+('reg_alpha', 0.0)
+('reg_lambda', 0.0)
+('silent', True)
+('subsample', 0.8)
+('subsample_for_bin', 200000)
+('subsample_freq', 0)
+('device', 'gpu')
+--------------------------------
+
+2020-03-23 16:29:16.467616 - 0.79413 n_estimators를 조절해야하는데 실수로 num_leaves를 조절해버림..
+item_id  dept_id  cat_id  store_id  
+state_id  year  month  week  day  
+weekday  event_name_1  event_type_1  snap_CA  snap_TX  
+snap_WI  sell_price  lag_t28  lag_t29  lag_t30  
+rolling_mean_t7  rolling_std_t7  rolling_mean_t30  rolling_mean_t90  rolling_mean_t180  
+rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t30  
+('boosting_type', 'gbdt')
+('class_weight', None)
+('colsample_bytree', 0.8)
+('importance_type', 'split')
+('learning_rate', 0.01)
+('max_depth', -1)
+('min_child_samples', 20)
+('min_child_weight', 0.001)
+('min_split_gain', 0.0)
+('n_estimators', 400)
+('n_jobs', -1)
+('num_leaves', 600)
+('objective', None)
+('random_state', None)
+('reg_alpha', 0.0)
+('reg_lambda', 0.0)
+('silent', True)
+('subsample', 0.8)
+('subsample_for_bin', 200000)
+('subsample_freq', 0)
+('device', 'gpu')
+--------------------------------
+
+2020-03-23 22:12:08.574824 - 0.69743
+item_id  dept_id  cat_id  store_id  
+state_id  year  month  week  day  
+weekday  event_name_1  event_type_1  snap_CA  snap_TX  
+snap_WI  sell_price  lag_t28  lag_t29  lag_t30  
+rolling_mean_t7  rolling_std_t7  rolling_mean_t30  rolling_mean_t90  rolling_mean_t180  
+rolling_std_t30  price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t30  
+('boosting_type', 'gbdt')
+('class_weight', None)
+('colsample_bytree', 0.8)
+('importance_type', 'split')
+('learning_rate', 0.01)
+('max_depth', -1)
+('min_child_samples', 20)
+('min_child_weight', 0.001)
+('min_split_gain', 0.0)
+('n_estimators', 400)
 ('n_jobs', -1)
 ('num_leaves', 4000)
 ('objective', None)
