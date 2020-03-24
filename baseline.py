@@ -7,7 +7,7 @@ import pickle
 import time
 import datetime
 import os
-from functions import *
+from mypackage import *
 # pd.set_option('display.max_columns', None)
 # pd.set_option('display.max_rows', None)
 # pd.set_option('display.max_colwidth', None)
