@@ -63,7 +63,7 @@ def write_params_features(features, params, eval_results):
             record.write("\n")
         record.write(str(row) + '  ')
 
-    record.write('--------------------------------\n')
+    record.write('\n--------------------------------\n')
     record.close()
 
 def save_feature_importance(feature):
