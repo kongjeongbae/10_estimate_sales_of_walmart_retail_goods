@@ -100,7 +100,7 @@ def wrmsse(preds, data):
     
     return 'wrmsse', score, False
  
-def write_params_features(features, params, eval_results):
+def write_params_features(features, params, eval_results, mean_score):
     record = open("record_model_and_features.txt", 'a')
     record.write("\n")
     record.write(str(datetime.datetime.now())+"\n")
@@ -121,6 +121,9 @@ def write_params_features(features, params, eval_results):
         if check % 20 == 0:
             record.write("\n")
         record.write(str(row) + '  ')
+    record.write("\n")
+    for i in mean_score:
+        record.write(str(i) + '  ')
 
     record.write('\n--------------------------------\n')
     record.close()
