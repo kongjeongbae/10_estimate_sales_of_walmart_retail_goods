@@ -3043,6 +3043,7 @@ lag_t18  lag_t19  lag_t20  lag_t21  lag_t22  lag_t23  lag_t24  lag_t25  lag_t26 
 lag_t28  rolling_mean_t7  rolling_std_t7  rolling_mean_t28  rolling_std_t28  rolling_mean_t56  rolling_std_t56  rolling_mean_t84  rolling_std_t84  rolling_mean_t112  
 rolling_std_t112  rolling_mean_t168  rolling_std_t168  price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t28  lag_t29  lag_t30  lag_t31  
 lag_t32  weekofmonth  item_id_gb_sell_price_mean  item_id_gb_sell_price_std  
+
 ('boosting_type', 'gbdt')
 ('class_weight', None)
 ('colsample_bytree', 0.8)
@@ -3148,4 +3149,35 @@ price_change_t365  rolling_price_std_t7  rolling_price_std_t30  weekofmonth  ite
 2.049873397222986  
 
 1.9621768274675193  2.00202858114635  2.009521482573238  2.0277316131699137  2.0498733972230196  
+--------------------------------
+
+앙상블
+
+FNU050 새로운 submission 0.50357과 내꺼(바로 위에꺼) 0.50755 을 0.5 비율로 합쳤더니
+0.49549
+
+--------------------------------
+앙상블
+
+FNU050 새로운 submission 0.50357  0.55과 내꺼(바로 위에꺼) 0.50755 을 0.45 비율로 합쳤더니
+
+
+--------------------------------
+store_id 별로 (10개) 모델 만들어서 제출해봄.
+모델이 여러개라 10개씩 피쳐중요도를 저장할 수 없어서 생략함.
+
+0.54413 생각보다 꽤나 점수가 높음.
+
+이제 정리할 때가 됐다.
+베이스라인 다시 정리하자.
+함수로 만들 수 있는 건 함수로 다 만들자.
+
+그리고 store_id 별로  rmse 값이 너무나도 다름
+어떤건 2.0대고 어떤건 8.0대이다. 점수가 낮은 이유를 찾아보자.
+그리고 10개의 모델별로 파라미터도 다시 설정하자.
+
+store_id 별로 아예 새로운 모델을 만든다고 생각하자.
+
+결국 최고는 store_id별로 28일의 모델 만드는 것. 즉 280개 모델로 예측하는게 제일 정확도 높을듯
+
 --------------------------------
