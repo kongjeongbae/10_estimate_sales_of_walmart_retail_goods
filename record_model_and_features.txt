@@ -3032,7 +3032,7 @@ price_change_t365  rolling_price_std_t7  rolling_price_std_t30
 --------------------------------
 
 2020-04-07 10:57:30.879677
-
+best_score
 0.50755
 
 id  item_id  dept_id  cat_id  store_id  state_id  d  sales  date  
