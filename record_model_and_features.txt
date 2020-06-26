@@ -3642,3 +3642,28 @@ price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t28 
 1.9981536722677793  
 2.0127623185141266  1.9947622167554575  2.055215198076721  2.023562348648471  1.9981536722682862  
 --------------------------------
+2020-04-07 10:57:30.879677
+best_score
+0.50755
+
+id  item_id  dept_id  cat_id  store_id  state_id  d  sales  date  
+wm_yr_wk  weekday  month  year  event_name_1  event_type_1  snap_CA  snap_TX  snap_WI  is_event  
+day  week  sell_price  
+
+lag_t1  lag_t2  lag_t3  lag_t4  lag_t5  lag_t6  lag_t7  
+lag_t8  lag_t9  lag_t10  lag_t11  lag_t12  lag_t13  lag_t14  lag_t15  lag_t16  lag_t17  
+lag_t18  lag_t19  lag_t20  lag_t21  lag_t22  lag_t23  lag_t24  lag_t25  lag_t26  lag_t27  
+lag_t28  
+
+rolling_mean_t7  rolling_std_t7  
+rolling_mean_t28  rolling_std_t28  
+rolling_mean_t56  rolling_std_t56  
+rolling_mean_t84  rolling_std_t84  
+rolling_mean_t112  rolling_std_t112  
+rolling_mean_t168  rolling_std_t168 
+
+ price_change_t1  price_change_t365  rolling_price_std_t7  rolling_price_std_t28  
+ 
+ lag_t29  lag_t30  lag_t31  lag_t32 
+
+ weekofmonth  item_id_gb_sell_price_mean  item_id_gb_sell_price_std  
